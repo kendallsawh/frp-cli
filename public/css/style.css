@@ -1,0 +1,174 @@
+﻿.navbar-right {
+    margin-right: inherit !important;
+}
+
+.sidebar .sidebar-wrapper, .off-canvas-sidebar .sidebar-wrapper {
+    height: calc(100vh - 105px) !important;
+}
+
+.red {
+	color: red !important;
+	font-weight: bold !important;
+}
+
+.required {
+	margin-top: 20px;
+}
+
+.form-group.has-error .form-control {
+    background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2) !important;
+}
+
+.round-border {
+    border: 1px solid #ccc !important;
+    border-radius: 16px;
+}
+
+.round-border-20 {
+    border: 1px solid #ccc !important;
+    border-radius: 16px;
+    padding-bottom: 20px;
+}
+
+label.radio {
+	position: relative;
+    top: -5px;
+}
+
+label.radio > input {
+    height: 20px !important;
+    width: 20px !important;
+    top: 5px !important;
+    position: relative !important;
+    opacity: initial !important;
+}
+
+.card .card-header .title {
+    color: #FFFFFF;
+}
+
+.wizard-header {
+    text-align: center;
+}
+
+.wizard-card .wizard-header {
+    padding: 15px 0 0px !important;
+}
+
+.picture-container {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.modal-xl {
+    width: 90%;
+}
+
+th {
+    font-weight: bold !important;
+}
+
+.avatar {
+    max-width: 200px !important;
+    max-height: 200px !important;
+}
+
+.list-avatar > a > img {
+    max-width: 50px !important;
+    max-height: 50px !important;
+    width: auto !important;
+}
+
+.card-avatar {
+    max-width: 200px !important;
+    max-height: 200px !important;
+    border-radius: 0 !important;
+}
+
+.loading {
+    width: 100px !important;
+    margin: 20% auto !important;
+}
+
+.loading > .modal-content {
+    background-color: rgba(255,255,255,0.6) !important;
+}
+
+.loading > .modal-content > .modal-body, .loading > .modal-content > .modal-body > h2 {
+    color: #4CAF50 !important;
+}
+
+.unit-addon {
+    background: #eee !important;
+}
+
+.reg-type-content {
+    min-height: inherit !important;
+}
+
+.reg-type-footer {
+    padding: 10px 15px !important;
+}
+
+.wizard-card .register {
+    min-height: inherit !important;
+}
+
+.login-ico {
+    width: 150px;
+    padding-bottom: 15px;
+}
+
+footer .copyright {
+    padding: 0 !important;
+}
+
+.radio label {
+    color: inherit !important;
+}
+
+#confirm.btn-finish {
+    top: 20px;
+}
+
+.wizard-h6 {
+    color: rgba(0,0,0, 0.87) !important;
+}
+
+div.row.no-padding > div {
+    padding: 0;
+}
+
+div.recommend > label.active {
+    opacity: 1.0;
+}
+
+div.recommend > label {
+    opacity: 0.4;
+}
+
+div.btn-group > label.btn:first-child {
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+div.btn-group > label.btn:last-child {
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.btn-blue {
+    color:#fff;
+    background-color:#3097D1;
+    border-color:#2a88bd;
+}
+
+.btn-blue.disabled.focus,.btn-blue.disabled:focus,.btn-blue.disabled:hover,
+.btn-blue[disabled].focus,.btn-blue[disabled]:focus,.btn-blue[disabled]:hover,
+fieldset[disabled] .btn-blue.focus,fieldset[disabled] .btn-blue:focus,
+fieldset[disabled] .btn-blue:hover{
+    background-color:#3097D1;border-color:#2a88bd
+}
+.btn-blue .badge{
+    color:#3097D1;background-color:#fff
+}

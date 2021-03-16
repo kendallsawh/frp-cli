@@ -1,0 +1,15 @@
+<div id="conf-pane-'+pane+'-parcel-'+cropNum+'" class="rowParcel-'+pane+'">
+    <h5><small>Crop</small></h5>
+    <div class="form-group">
+        <label for="" class="col-lg-2 control-label">Type of Crop/Animal</label>
+        <div class="col-lg-10" id="conf-parcel_type_'+pane+'_'+cropNum+'"></div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-lg-2 control-label">Specific Crop/Animal</label>
+        <div class="col-lg-10" id="conf-animal_crop_'+pane+'_'+cropNum+'"></div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-lg-2 control-label">Amount</label>
+        <div class="col-lg-10"><span id="conf-parcel_amt_'+pane+'_'+cropNum+'"></span> <span id="conf-parcel_unit_'+pane+'_'+cropNum+'"></span></div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="card-title text-center">{{$user->userapplicationlist()->count() <= 0? 'No ': ''}} Applications {{$user->userapplicationlist()->count() <= 0? 'assigned to this User.': ''}}</h3>
+        @if($user->userapplicationlist()->count())
+        <div class="table-responsive">
+            <table class="table list_table">
+                <thead class="">
+                    <th class="text-center">No</th>
+                    
+                    <th>Applicant</th>
+                    <th>Status</th>
+                    <th>Created On</th>
+                    <th>Assigned On</th>
+                    <th class="text-center"><i class="fa fa-cogs"></i></th>
+                </thead>
+                <tbody>
+                    @foreach($user->userapplicationlist() as $app)
+                    <tr>
+                        <td class="text-center">{{$app->id}}</td>
+                        
+                        <td>{{$app->applicant()->name}}</td>
+                        <td>{{$app->status->status}}</td>
+                        <td>{{$app->createdOn}}</td>
+                        <td>{{$user->CreatedOn($user->userappassinged($app->id,$user->id)->created_at)}}</td>
+                        <td class="td-actions text-center">
+                            <a href="{{url('/application/view/'.$app->id)}}" rel="tooltip" class="btn btn-info" data-original-title="View Application" title="">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <div class="ripple-container"></div>
+                            </a>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+        @else
+        
+
+        
+        @endif
+    </div>
+</div>
