@@ -436,8 +436,8 @@ class IndividualRegisterController extends Controller
                 $application = new Application;
                 $application->old_registration_num = html_entity_decode($request->oldregistration, ENT_QUOTES, 'UTF-8');
                 $application->app_type_id = $request->app_type;
-                
-                $application->registration_id = $request->options;
+                $application->registration_id = $request->regtype;
+                //$application->registration_id = $request->options;
                 //$application->registration_id = isset($request->oldregistration)?  2: $regType->id;
                 $application->application_date = $request->appdate;
                 $application->created_by = 1;
@@ -776,6 +776,7 @@ class IndividualRegisterController extends Controller
                         $userapplication = new UserApplication;
                         $userapplication->user_id = \Auth::user()->id;
                         $userapplication->application_id = $application->id;
+                        $userapplication->type = $request->regtype;
                         $userapplication->save();
 
                         $appointment = new Appointment;
