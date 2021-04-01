@@ -80,7 +80,7 @@
                                             <h5 class="description"><span rel="tooltip" title="Age"> <i class="fa fa-fw fa-calendar" aria-hidden="true" style="padding-right:10px"></i> {{$data->age}} years</span></h5>
                                         </div>
                                         <div class="col-md-4">
-                                            <h5 class="description"><span rel="tooltip" title="Created On"> <i class="fa fa-fw fa-clock-o" aria-hidden="true" style="padding-right:10px"></span></h5>
+                                            <h5 class="description"><span rel="tooltip" title="Created On"> <i class="fa fa-fw fa-clock-o" aria-hidden="true" style="padding-right:10px"></i> {{$data->since}}</span></h5>
                                         </div>
 
                                         @if($data->homecontact)
