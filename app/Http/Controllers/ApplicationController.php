@@ -83,7 +83,7 @@ class ApplicationController extends Controller
           return view('application.view', $data);
           }
           else{
-            return redirect('/');
+            return redirect('/home');
           }
           //return \Auth::user()->userapplication->application_id;
           
