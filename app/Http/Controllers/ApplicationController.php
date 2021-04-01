@@ -33,8 +33,11 @@ class ApplicationController extends Controller
     */
         public function view($id=0){
           $chk = false;
-          if (\Auth::user()->userapplication->application_id==$id) {
-            $chk = true;
+          if (\Auth::user()->userapplication) {
+            if (\Auth::user()->userapplication->application_id==$id) {
+              $chk = true;
+            }
+            else $chk = false;
           }
           
           if ($chk) {
@@ -80,7 +83,7 @@ class ApplicationController extends Controller
           return view('application.view', $data);
           }
           else{
-            return redirect('/application/view/'.\Auth::user()->userapplication->application_id)->with('success', 'Application successful. ');
+            return redirect('/');
           }
           //return \Auth::user()->userapplication->application_id;
           
