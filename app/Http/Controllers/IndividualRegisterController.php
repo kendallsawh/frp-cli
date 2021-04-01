@@ -163,6 +163,7 @@ class IndividualRegisterController extends Controller
     {
 
         //return dd($request->all());
+        $ftp_server = "10.13.1.66";
         $ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
         ini_set('max_execution_time', '200000');
         /** Validation **/
@@ -867,13 +868,11 @@ class IndividualRegisterController extends Controller
     }
 
     function ftpconnect(){
-         /*THIS ONE*/
-                            $ftp_server = "10.13.1.66";
-                            
-                            $login = ftp_login($ftp_conn, 'apps', '1234');
-                            //two precceding lines are required for ftp passive mode
-                            ftp_set_option($ftp_conn, FTP_USEPASVADDRESS, false);
-                            ftp_pasv($ftp_conn, true);
+        /*THIS ONE*/
+        $login = ftp_login($ftp_conn, 'apps', '1234');
+        //two precceding lines are required for ftp passive mode
+        ftp_set_option($ftp_conn, FTP_USEPASVADDRESS, false);
+        ftp_pasv($ftp_conn, true);
 
     }
     function ftpdisconnect(){
