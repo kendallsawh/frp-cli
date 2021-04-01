@@ -165,6 +165,7 @@ class IndividualRegisterController extends Controller
         //return dd($request->all());
         $ftp_server = "10.13.1.66";
         $ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
+        $login = ftp_login($ftp_conn, 'apps', '1234');
         ini_set('max_execution_time', '200000');
         /** Validation **/
          $validator = Validator::make($request->all(), [
@@ -561,9 +562,9 @@ class IndividualRegisterController extends Controller
                             ftp_close($ftp_conn);*/
 
                             /*THIS ONE*/
-                            $ftp_server = "10.13.1.66";
+                           /* $ftp_server = "10.13.1.66";
                             $ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
-                            $login = ftp_login($ftp_conn, 'apps', '1234');
+                            $login = ftp_login($ftp_conn, 'apps', '1234');*/
                             //two precceding lines are required for ftp passive mode
                             ftp_set_option($ftp_conn, FTP_USEPASVADDRESS, false);
                             ftp_pasv($ftp_conn, true);
@@ -575,7 +576,7 @@ class IndividualRegisterController extends Controller
                             
 
                             // close connection
-                            ftp_close($ftp_conn);
+                            //ftp_close($ftp_conn);
                             
                                             // save document to parcel
                             //return $doc.' '.$n_id->documents;
@@ -638,7 +639,7 @@ class IndividualRegisterController extends Controller
 
                             
                             $files = $doc;
-                            $login = ftp_login($ftp_conn, 'apps', '1234');
+                            //$login = ftp_login($ftp_conn, 'apps', '1234');
                             //two precceding lines are required for ftp passive mode
                             ftp_set_option($ftp_conn, FTP_USEPASVADDRESS, false);
                             ftp_pasv($ftp_conn, true);
@@ -647,7 +648,7 @@ class IndividualRegisterController extends Controller
                             
 
                             // close connection
-                            ftp_close($ftp_conn);
+                            //ftp_close($ftp_conn);
 
                             $passport = new IndividualID;
                             $passport->individual_id = $individual->id;
@@ -750,7 +751,7 @@ class IndividualRegisterController extends Controller
                                                     // 
                                             
                                             $files = $doc;
-                                            $login = ftp_login($ftp_conn, 'apps', '1234');
+                                            //$login = ftp_login($ftp_conn, 'apps', '1234');
                                             //two precceding lines are required for ftp passive mode
                                             ftp_set_option($ftp_conn, FTP_USEPASVADDRESS, false);
                                             ftp_pasv($ftp_conn, true);
@@ -759,7 +760,7 @@ class IndividualRegisterController extends Controller
 
 
                                             // close connection
-                                            ftp_close($ftp_conn);
+                                            //ftp_close($ftp_conn);
 
                                             $proofdocs = new ParcelProofOfIntDocs;
                                             $proofdocs->parcel_proof_of_int_id = $proof->id;
@@ -827,7 +828,7 @@ class IndividualRegisterController extends Controller
                 }
             }
             
-            
+            ftp_close($ftp_conn);
             // commit all the data to db before returning
             DB::commit();
 
