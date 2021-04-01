@@ -567,7 +567,7 @@ class IndividualRegisterController extends Controller
                             //two precceding lines are required for ftp passive mode
                             ftp_set_option($ftp_conn, FTP_USEPASVADDRESS, false);
                             ftp_pasv($ftp_conn, true);*/
-                            $this->ftpconnect();
+                            $this->ftpconnect($ftp_conn);
                             $files = $doc;
 
                             // upload file
@@ -636,7 +636,7 @@ class IndividualRegisterController extends Controller
                             $file->storeAs('public/proofdocs', $doc);
                                                 // save document to parcel
 
-                            $this->ftpconnect();
+                            $this->ftpconnect($ftp_conn);
                             $files = $doc;
 
                             // upload file
@@ -745,7 +745,7 @@ class IndividualRegisterController extends Controller
                                             $file->storeAs('public/proofdocs', $doc);
                                                     // save document to parcel
                                                     // 
-                                            $this->ftpconnect();
+                                            $this->ftpconnect($ftp_conn);
                                             $files = $doc;
 
                                             // upload file
@@ -867,7 +867,7 @@ class IndividualRegisterController extends Controller
             }         
     }
 
-    function ftpconnect(){
+    function ftpconnect($ftp_conn){
         /*THIS ONE*/
         $login = ftp_login($ftp_conn, 'apps', '1234');
         //two precceding lines are required for ftp passive mode
