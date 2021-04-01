@@ -562,6 +562,7 @@ class IndividualRegisterController extends Controller
                             $ftp_server = "10.13.1.66";
                             $ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
                             $login = ftp_login($ftp_conn, 'apps', '1234');
+                            //two precceding lines are required for ftp passive mode
                             ftp_set_option($ftp_conn, FTP_USEPASVADDRESS, false);
                             ftp_pasv($ftp_conn, true);
                             $files = $doc;
