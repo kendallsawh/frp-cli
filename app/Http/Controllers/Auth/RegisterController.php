@@ -70,7 +70,7 @@ class RegisterController extends Controller
             'f_name' => $data['fname'],
             'l_name' => $data['lname'],
             'username' => $data['username'],
-            'id' => $data['id'],
+            'identification' => $data['id'],
             'email' => $data['email'],
             'password' => $data['password'],
         ]);

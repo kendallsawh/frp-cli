@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="form-group{{ $errors->has('id') ? ' has-error' : '' }}">
-                    <label for="id" class="col-md-4 control-label">ID Number</label>
+                    <label for="id" class="col-md-4 control-label">ID Number(National or Passport)</label>
 
                     <div class="col-md-6">
                         <input id="id" type="text" class="form-control" name="id" value="{{ old('id') }}" required>
