@@ -23,7 +23,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $dates = ['deleted_at'];
     protected $fillable = [
-        'f_name', 'l_name', 'username', 'email', 'password', 'lastlogin',
+        'f_name', 'l_name', 'username', 'email', 'password', 'lastlogin','identification',
     ];
 
     /**

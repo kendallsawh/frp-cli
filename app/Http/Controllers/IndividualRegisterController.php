@@ -831,7 +831,7 @@ class IndividualRegisterController extends Controller
             ftp_close($ftp_conn);
             // commit all the data to db before returning
             DB::commit();
-
+            /*send county email*/
             $users = Counties::where('id',$appointment->county_id)
             ->whereNotNull('email',)
             ->get();
@@ -842,7 +842,7 @@ class IndividualRegisterController extends Controller
                 }
             }
 
-
+            /*send user notification email*/
             $county = Counties::find($appointment->county_id)->first();
             $regtype = $appointment->appointment_type == 1? 'New' : 'Renewal';
             Notification::route('mail', $individual->email)
